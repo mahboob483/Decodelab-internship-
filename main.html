@@ -2,301 +2,418 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TasteHub — Delicious Food, Memorable Experience</title>
-  <link rel="stylesheet" href="all.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CMS – Complaint Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="all.css">
+  
 </head>
 <body>
 
-  <!-- ========== NAVIGATION ========== -->
-  <header id="home">
-    <nav class="navbar">
-      <div class="nav-logo">
-        <span class="logo-icon"></span>
-        <span class="logo-text">TasteHub</span>
-      </div>
-      <ul class="nav-links">
+<!-- ──────────── NAV ──────────── -->
+<nav class="nav" id="home">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span>C</span> CMS
+      </a>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#submit">Submit Complaint</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#track">Track Status</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="#submit" class="nav-cta">File a Complaint →</a></li>
       </ul>
-      <div class="nav-cta">Reserve a Table</div>
-    </nav>
-  </header>
+    </div>
+  </div>
+</nav>
 
-  <!-- ========== HERO SECTION ========== -->
-  <section class="hero">
-    <div class="hero-bg-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Est. 2018 · Lahore, Pakistan</p>
-      <h1 class="hero-heading">
-        Delicious Food,<br />
-        <em>Memorable</em><br />
-        Experience
-      </h1>
-      <p class="hero-tagline">Fresh ingredients. Authentic taste.</p>
-      <div class="hero-actions">
-        <a href="#menu" class="btn btn-primary">Explore Menu</a>
-        <a href="#about" class="btn btn-ghost">Our Story</a>
-      </div>
-    </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-    <!-- Decorative food cards -->
-    <div class="hero-card hero-card-1">
-      <span class="card-emoji">🍕</span>
-      <p>Wood-Fired Pizza</p>
-    </div>
-    <div class="hero-card hero-card-2">
-      <span class="card-emoji">⭐</span>
-      <p>4.9 Rating</p>
-    </div>
-  </section>
-
-  <!-- ========== ABOUT SECTION ========== -->
-  <section class="about" id="about">
-    <div class="about-inner">
-      <div class="about-image-col">
-        <div class="about-img-frame">
-          <img
-            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80"
-            alt="TasteHub Restaurant Interior"
-          />
+<!-- ──────────── HERO ──────────── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-badge">Now serving 50,000+ complaints resolved</div>
+        <h1>Report Issues,<br>Get <em>Solutions</em><br>Faster.</h1>
+        <p>A simple and efficient complaint management system designed to connect you with the right team — quickly and transparently.</p>
+        <div class="hero-btns">
+          <a href="#submit" class="btn btn-primary">Submit a Complaint</a>
+          <a href="#track" class="btn btn-white">Track Status</a>
         </div>
-        <div class="about-stat-box">
-          <div class="stat">
-            <span class="stat-num">120+</span>
-            <span class="stat-label">Menu Items</span>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div class="status-dot dot-green"></div>
+            <span class="hero-card-label">Recently Resolved</span>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">8+</span>
-            <span class="stat-label">Years Serving</span>
+          <div class="hero-card-title">Billing charge discrepancy</div>
+          <div class="hero-card-sub">Resolved in 4 hours · Ticket #CMS-8821</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div class="status-dot dot-orange"></div>
+            <span class="hero-card-label">In Progress</span>
+          </div>
+          <div class="hero-card-title">Network connectivity issue</div>
+          <div class="hero-card-sub">Assigned to tech team · Ticket #CMS-9043</div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-box">
+            <span class="stat-num">98%</span>
+            <span class="stat-lbl">Resolved</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">4h</span>
+            <span class="stat-lbl">Avg. Time</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">50k+</span>
+            <span class="stat-lbl">Tickets</span>
           </div>
         </div>
       </div>
-
-      <div class="about-text-col">
-        <p class="section-eyebrow">Our Story</p>
-        <h2 class="section-heading">About <em>TasteHub</em></h2>
-        <p class="about-para">
-          Nestled in the heart of the city, TasteHub was born from a single 
-          obsession — serving food that tells a story. We blend time-honoured 
-          recipes from across the globe with the freshest locally-sourced 
-          ingredients, crafted by chefs who treat every plate as a canvas.
-        </p>
-        <p class="about-para">
-          Whether you're joining us for a relaxed family lunch, a romantic 
-          dinner, or a celebratory feast, our warm, elegant dining room and 
-          attentive service ensure every visit becomes a cherished memory.
-        </p>
-        <div class="about-tags">
-          <span class="tag">Family-Friendly</span>
-          <span class="tag">Fine Dining</span>
-          <span class="tag">Farm-to-Table</span>
-          <span class="tag">Halal Certified</span>
-        </div>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== MENU SECTION ========== -->
-  <section class="menu" id="menu">
-    <div class="menu-header">
-      <p class="section-eyebrow">Crafted With Love</p>
-      <h2 class="section-heading">Our <em>Menu</em></h2>
-      <p class="menu-subtitle">Every dish made fresh, every day.</p>
-    </div>
-
-    <div class="menu-grid">
-
-      <div class="menu-card">
-        <div class="menu-card-top">
-          <span class="menu-emoji">🍔</span>
-          <span class="menu-badge">Bestseller</span>
-        </div>
-        <h3 class="menu-item-name">Truffle Smash Burger</h3>
-        <p class="menu-item-desc">Double smash patty, truffle aioli, caramelised onions, aged cheddar on a brioche bun.</p>
-        <p class="menu-price">Rs. 1,299</p>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-top">
-          <span class="menu-emoji">🍕</span>
-          <span class="menu-badge">Chef's Pick</span>
-        </div>
-        <h3 class="menu-item-name">Margherita Classica</h3>
-        <p class="menu-item-desc">San Marzano tomatoes, fresh buffalo mozzarella, basil, extra-virgin olive oil, wood-fired crust.</p>
-        <p class="menu-price">Rs. 1,099</p>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-top">
-          <span class="menu-emoji">🍝</span>
-        </div>
-        <h3 class="menu-item-name">Creamy Carbonara</h3>
-        <p class="menu-item-desc">Al dente spaghetti, crispy pancetta, egg yolk sauce, Pecorino Romano, cracked black pepper.</p>
-        <p class="menu-price">Rs. 1,199</p>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-top">
-          <span class="menu-emoji">🥗</span>
-        </div>
-        <h3 class="menu-item-name">Harvest Caesar Salad</h3>
-        <p class="menu-item-desc">Romaine hearts, house Caesar dressing, sourdough croutons, shaved Parmesan, lemon zest.</p>
-        <p class="menu-price">Rs. 799</p>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-top">
-          <span class="menu-emoji">🧁</span>
-          <span class="menu-badge">New</span>
-        </div>
-        <h3 class="menu-item-name">Belgian Waffle Stack</h3>
-        <p class="menu-item-desc">Three golden waffles, whipped mascarpone, seasonal berry compote, drizzled dark chocolate.</p>
-        <p class="menu-price">Rs. 899</p>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-card-top">
-          <span class="menu-emoji">🥤</span>
-        </div>
-        <h3 class="menu-item-name">Signature Iced Chai</h3>
-        <p class="menu-item-desc">Cold-brewed spiced chai, condensed milk foam, cardamom dust, served over artisan ice.</p>
-        <p class="menu-price">Rs. 549</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========== GALLERY SECTION ========== -->
-  <section class="gallery" id="gallery">
-    <div class="gallery-header">
-      <p class="section-eyebrow">A Feast For The Eyes</p>
-      <h2 class="section-heading">Our <em>Gallery</em></h2>
-    </div>
-
-    <div class="gallery-grid">
-      <div class="gallery-item gallery-large">
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80" alt="Beautifully plated dish" />
-        <div class="gallery-overlay"><span>Signature Plates</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Gourmet food spread" />
-        <div class="gallery-overlay"><span>Fresh Flavours</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Restaurant interior" />
-        <div class="gallery-overlay"><span>Our Ambiance</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Wood-fired pizza" />
-        <div class="gallery-overlay"><span>Wood-Fired Pizza</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80" alt="Breakfast spread" />
-        <div class="gallery-overlay"><span>Weekend Brunch</span></div>
-      </div>
-      <div class="gallery-item gallery-wide">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="Fine dining table setting" />
-        <div class="gallery-overlay"><span>Fine Dining Setting</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT SECTION ========== -->
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <div class="contact-info-col">
-        <p class="section-eyebrow">Get In Touch</p>
-        <h2 class="section-heading">Contact <em>Us</em></h2>
-        <p class="contact-intro">We'd love to hear from you — reservations, events, or just to say hello.</p>
-
-        <div class="contact-details">
-          <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <div>
-              <strong>Phone</strong>
-              <p>+92 321 456 7890</p>
+<!-- ──────────── SUBMIT ──────────── -->
+<section class="submit-section" id="submit">
+  <div class="container">
+    <div class="submit-grid">
+      <div class="submit-info">
+        <span class="section-label">Submit a Complaint</span>
+        <h2 class="section-title">We're here to make things right</h2>
+        <p class="section-sub">Describe your issue clearly and our team will get on it right away. Your complaint is logged, tracked and handled with care.</p>
+        <div class="why-list" style="margin-top:2rem;">
+          <div class="why-item">
+            <div class="why-icon">⚡</div>
+            <div class="why-text">
+              <strong>Fast Response</strong>
+              <span>Expect an initial response within 2 business hours.</span>
             </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">✉️</span>
-            <div>
-              <strong>Email</strong>
-              <p>hello@tastehub.pk</p>
+          <div class="why-item">
+            <div class="why-icon">🔒</div>
+            <div class="why-text">
+              <strong>Secure & Confidential</strong>
+              <span>Your complaint details are kept private and protected.</span>
             </div>
           </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <div>
-              <strong>Address</strong>
-              <p>12 Gulberg Main Boulevard,<br />Lahore, Punjab, Pakistan</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">🕐</span>
-            <div>
-              <strong>Hours</strong>
-              <p>Mon – Thu: 12pm – 11pm<br />Fri – Sun: 11am – 12am</p>
+          <div class="why-item">
+            <div class="why-icon">📍</div>
+            <div class="why-text">
+              <strong>Real-time Tracking</strong>
+              <span>Follow every step of the resolution process online.</span>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="contact-form-col">
-        <div class="form-card">
-          <h3>Send Us a Message</h3>
+      <div class="form-card">
+        <h3>📝 New Complaint</h3>
+        <div class="form-row">
           <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="e.g. Ahmed Khan" />
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" placeholder="Ali Hassan" />
           </div>
           <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="ahmed@example.com" />
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" placeholder="ali@example.com" />
           </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Tell us about your reservation or inquiry..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fcat">Complaint Category</label>
+          <select id="fcat">
+            <option value="">— Select a category —</option>
+            <option>Technical Issue</option>
+            <option>Billing Problem</option>
+            <option>Service Complaint</option>
+            <option>Account Issue</option>
+            <option>Delivery Issue</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fdesc">Describe Your Complaint</label>
+          <textarea id="fdesc" placeholder="Please describe the issue in detail..."></textarea>
+        </div>
+        <button class="btn btn-primary form-submit" type="button">Submit Complaint →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────── CATEGORIES ──────────── -->
+<section class="categories" id="categories">
+  <div class="container">
+    <div class="categories-header">
+      <span class="section-label">Categories</span>
+      <h2 class="section-title">What can we help you with?</h2>
+      <p class="section-sub">Choose the category that best matches your issue and get routed to the right support team instantly.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="cat-card">
+        <div class="cat-icon">🖥️</div>
+        <h4>Technical Issue</h4>
+        <p>Software bugs, system errors, performance problems, or any technical malfunction.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">💳</div>
+        <h4>Billing Problem</h4>
+        <p>Incorrect charges, payment failures, refund requests, or invoice discrepancies.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">🛎️</div>
+        <h4>Service Complaint</h4>
+        <p>Poor service quality, unmet expectations, or dissatisfaction with our support.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">👤</div>
+        <h4>Account Issue</h4>
+        <p>Login problems, password resets, account suspension, or unauthorized access.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">📦</div>
+        <h4>Delivery Issue</h4>
+        <p>Late deliveries, wrong items, missing packages, or damaged shipments.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon">💬</div>
+        <h4>General Inquiry</h4>
+        <p>Any question or feedback that does not fall under the categories above.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────── TRACK ──────────── -->
+<section class="track-section" id="track">
+  <div class="container">
+    <div class="track-inner">
+      <div class="track-text">
+        <span class="section-label">Track Status</span>
+        <h2 class="section-title">Always know where your complaint stands</h2>
+        <p class="section-sub">Enter your Complaint ID to get a real-time status update on your ticket at any point during the resolution process.</p>
+      </div>
+      <div class="track-box">
+        <h3>🔍 Track Your Complaint</h3>
+        <div class="track-input-row">
+          <input type="text" placeholder="Enter Complaint ID (e.g. CMS-1234)" />
+          <button class="btn btn-primary" type="button">Track</button>
+        </div>
+        <div class="statuses">
+          <div class="status-row">
+            <span class="status-badge badge-pending">Pending</span>
+            <div class="status-desc">
+              <strong>Complaint Received</strong>
+              Your complaint is logged and awaiting assignment.
+            </div>
           </div>
-          <button type="button" class="btn btn-primary btn-full">Send Message</button>
+          <div class="status-row active">
+            <span class="status-badge badge-progress">In Progress</span>
+            <div class="status-desc">
+              <strong>Under Investigation</strong>
+              Our team is actively working on your issue.
+            </div>
+          </div>
+          <div class="status-row">
+            <span class="status-badge badge-resolved">Resolved</span>
+            <div class="status-desc">
+              <strong>Issue Closed</strong>
+              Your complaint has been successfully resolved.
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="footer-inner">
+<!-- ──────────── ABOUT ──────────── -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-bg-card">
+          <div class="about-icon-row">
+            <div class="about-icon-circle" style="background:#e8f1ff;">📊</div>
+            <div>
+              <div style="font-family:'Sora',sans-serif;font-weight:700;font-size:.95rem;">Resolution Dashboard</div>
+              <div style="font-size:.82rem;color:var(--muted);">Updated in real-time</div>
+            </div>
+          </div>
+          <div class="about-metric">
+            <div class="metric-item">
+              <span class="metric-val">98%</span>
+              <span class="metric-lbl">Resolution Rate</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">4h</span>
+              <span class="metric-lbl">Avg. Response</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-val">50k</span>
+              <span class="metric-lbl">Complaints Handled</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-floating">
+          <div class="floating-icon">✅</div>
+          <div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.5);margin-bottom:.1rem;">JUST RESOLVED</div>
+            <div>Technical issue closed</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-label">About CMS</span>
+        <h2 class="section-title">Built to resolve issues, not just log them</h2>
+        <p style="color:var(--muted);font-size:.97rem;margin-bottom:1.5rem;">CMS was created with one goal: to make complaint resolution fast, transparent, and stress-free for everyone involved.</p>
+        <ul class="about-points">
+          <li class="about-point">
+            <div class="point-icon">📝</div>
+            <div class="point-text">
+              <h5>Easy Complaint Submission</h5>
+              <p>File a complaint in under 2 minutes with our intuitive multi-category form designed for all users.</p>
+            </div>
+          </li>
+          <li class="about-point">
+            <div class="point-icon">⚡</div>
+            <div class="point-text">
+              <h5>Faster Resolution</h5>
+              <p>Smart routing ensures your complaint reaches the right team immediately, cutting resolution times dramatically.</p>
+            </div>
+          </li>
+          <li class="about-point">
+            <div class="point-icon">🔍</div>
+            <div class="point-text">
+              <h5>Transparent Tracking</h5>
+              <p>Follow every stage of your complaint's journey from submission to final resolution with full visibility.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────── CONTACT ──────────── -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-header">
+      <span class="section-label">Contact Support</span>
+      <h2 class="section-title">Get in touch with our team</h2>
+      <p class="section-sub">Our support team is available Monday–Friday, 9 AM to 6 PM. We aim to respond within 2 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card">
+          <div class="contact-card-icon">✉️</div>
+          <div>
+            <h5>Email</h5>
+            <p>support@cms-system.com</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">📞</div>
+          <div>
+            <h5>Phone</h5>
+            <p>+92 300 123 4567</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">📍</div>
+          <div>
+            <h5>Office</h5>
+            <p>123 Main Street, Islamabad, Pakistan</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">🕐</div>
+          <div>
+            <h5>Working Hours</h5>
+            <p>Mon – Fri · 9:00 AM to 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <h3>💌 Send us a Message</h3>
+        <div class="form-group">
+          <label for="cname">Your Name</label>
+          <input type="text" id="cname" placeholder="Full name" />
+        </div>
+        <div class="form-group">
+          <label for="cemail">Email Address</label>
+          <input type="email" id="cemail" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="cmsg">Message</label>
+          <textarea id="cmsg" placeholder="How can we help you?" style="min-height:130px;"></textarea>
+        </div>
+        <button class="btn btn-primary" type="button" style="width:100%;">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────── FOOTER ──────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <span class="logo-icon"></span>
-        <span class="logo-text">TasteHub</span>
-        <p>Delicious Food. Memorable Experience.</p>
+        <a href="#home" class="nav-logo" style="color:var(--blue);">
+          <span>C</span> CMS
+        </a>
+        <p>A simple and efficient complaint management system that ensures every issue gets the attention it deserves.</p>
+        <div class="footer-social">
+          <a href="#" class="soc-btn" aria-label="Facebook">f</a>
+          <a href="#" class="soc-btn" aria-label="Twitter">𝕏</a>
+          <a href="#" class="soc-btn" aria-label="LinkedIn">in</a>
+          <a href="#" class="soc-btn" aria-label="Instagram">▣</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#submit">Submit Complaint</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#track">Track Status</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
       </div>
-      <div class="footer-social">
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">TikTok</a>
-        <a href="#">Twitter / X</a>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#categories">Technical Issue</a></li>
+          <li><a href="#categories">Billing Problem</a></li>
+          <li><a href="#categories">Service Complaint</a></li>
+          <li><a href="#categories">Account Issue</a></li>
+          <li><a href="#categories">Delivery Issue</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 TasteHub Restaurant. All rights reserved.</p>
+      <span>© 2026 CMS – Complaint Management System. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
+<script src="intern.js"></script>
 
 </body>
 </html>
