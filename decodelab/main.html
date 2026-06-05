@@ -6,7 +6,6 @@
   <title>CMS – Complaint Management System</title>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../decodelab/all.css">
-  
 </head>
 <body>
 
@@ -110,21 +109,23 @@
           </div>
         </div>
       </div>
-      <div class="form-card">
+
+      <!-- ── TASK 4: Semantic <form> tag (Phase 1 – Semantic Skeleton) ── -->
+      <form class="form-card" id="complaintForm" novalidate>
         <h3>📝 New Complaint</h3>
         <div class="form-row">
           <div class="form-group">
             <label for="fname">Full Name</label>
-            <input type="text" id="fname" placeholder="Ali Hassan" />
+            <input type="text" id="fname" name="fullName" placeholder="Ali Hassan" autocomplete="name" />
           </div>
           <div class="form-group">
             <label for="femail">Email Address</label>
-            <input type="email" id="femail" placeholder="ali@example.com" />
+            <input type="email" id="femail" name="email" placeholder="ali@example.com" autocomplete="email" />
           </div>
         </div>
         <div class="form-group">
           <label for="fcat">Complaint Category</label>
-          <select id="fcat">
+          <select id="fcat" name="category">
             <option value="">— Select a category —</option>
             <option>Technical Issue</option>
             <option>Billing Problem</option>
@@ -136,10 +137,11 @@
         </div>
         <div class="form-group">
           <label for="fdesc">Describe Your Complaint</label>
-          <textarea id="fdesc" placeholder="Please describe the issue in detail..."></textarea>
+          <textarea id="fdesc" name="description" placeholder="Please describe the issue in detail..."></textarea>
         </div>
-        <button class="btn btn-primary form-submit" type="button">Submit Complaint →</button>
-      </div>
+        <!-- novalidate on <form> disables browser bubbles; JS handles all validation -->
+        <button class="btn btn-primary form-submit" type="submit">Submit Complaint →</button>
+      </form>
     </div>
   </div>
 </section>
@@ -199,7 +201,7 @@
       <div class="track-box">
         <h3>🔍 Track Your Complaint</h3>
         <div class="track-input-row">
-          <input type="text" placeholder="Enter Complaint ID (e.g. CMS-1234)" />
+          <input type="text" placeholder="Enter Complaint ID (e.g. CMS-1234)" aria-label="Complaint ID" />
           <button class="btn btn-primary" type="button">Track</button>
         </div>
         <div class="statuses">
@@ -337,22 +339,24 @@
           </div>
         </div>
       </div>
-      <div class="contact-form-card">
+
+      <!-- ── TASK 4: Contact form also uses semantic <form> tag ── -->
+      <form class="contact-form-card" id="contactForm" novalidate>
         <h3>💌 Send us a Message</h3>
         <div class="form-group">
           <label for="cname">Your Name</label>
-          <input type="text" id="cname" placeholder="Full name" />
+          <input type="text" id="cname" name="name" placeholder="Full name" autocomplete="name" />
         </div>
         <div class="form-group">
           <label for="cemail">Email Address</label>
-          <input type="email" id="cemail" placeholder="your@email.com" />
+          <input type="email" id="cemail" name="email" placeholder="your@email.com" autocomplete="email" />
         </div>
         <div class="form-group">
           <label for="cmsg">Message</label>
-          <textarea id="cmsg" placeholder="How can we help you?" style="min-height:130px;"></textarea>
+          <textarea id="cmsg" name="message" placeholder="How can we help you?" style="min-height:130px;"></textarea>
         </div>
-        <button class="btn btn-primary" type="button" style="width:100%;">Send Message →</button>
-      </div>
+        <button class="btn btn-primary" type="submit" style="width:100%;">Send Message →</button>
+      </form>
     </div>
   </div>
 </section>
@@ -413,7 +417,7 @@
     </div>
   </div>
 </footer>
-<script src="../decodelab/intern.js"></script>
 
+<script src="../decodelab/intern.js"></script>
 </body>
 </html>
